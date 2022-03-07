@@ -1,0 +1,7 @@
+services:
+  javawebapp:
+    image: 18.183.151.30:8083/javatestapp
+    ports:
+    - "8000:8080"
+    expose:
+    - "8080"
