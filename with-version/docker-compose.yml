@@ -1,7 +1,8 @@
 services:
   javawebapp:
+    container_name: with-version
     image: ${image_name}
     ports:
-    - "8000:8080"
+    - "8001:8080"
     expose:
     - "8080"
