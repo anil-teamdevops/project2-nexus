@@ -1,8 +1,8 @@
 services:
   javawebapp:
-    container_name: with-version
+    container_name: javapoc
     image: ${IMAGE_NAME}:${TAG}
     ports:
-    - "8001:8080"
+    - "8002:8080"
     expose:
     - "8080"
