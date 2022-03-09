@@ -1,7 +1,7 @@
 services:
   javawebapp:
     container_name: with-version
-    image: 13.231.245.46:8083/javatestapp:${TAG}
+    image: ${ip}:8083/javatestapp:${TAG}
     ports:
     - "8001:8080"
     expose:
