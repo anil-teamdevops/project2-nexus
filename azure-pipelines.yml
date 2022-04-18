@@ -18,5 +18,5 @@ steps:
   displayName: 'maven-build'
 
 - script: |
-    cp -R simplewebapp/target/simplewebapp.war /var/lib/tomcat/webapps
+    cp -R simplewebapp/target/simplewebapp.war /var/lib/tomcat9/webapps
   displayName: 'Deploy'
