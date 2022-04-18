@@ -14,6 +14,16 @@ steps:
 #   displayName: 'Run a one-line script'
 
 - script: |
+    sonar-scanner \
+      -Dsonar.projectKey=demo \
+      -Dsonar.sources=. \
+      -Dsonar.host.url=http://52.172.229.24:9000 \
+      -Dsonar.login=90fea1a81c0ec6007bf6e549b2efcf964cd6292b
+  displayName: 'Sonar-Scan'
+
+- script: 
+    archerysec-cli -h http://20.120.17.181:8000 -t IoLFVUWcIP3wR_j0ckkBnl2dLLsMh7TSzaH95wZvqeieuNSwdZ-RZxfb97xwhJov --cicd_id=6b0f2d03-087b-454d-9da1-e22efef3f2db --project=bd12fbdb-b996-4051-b4bc-f6df855dde1b --dependency-check --report_path=$(pwd)
+- script: |
     mvn -f simplewebapp/pom.xml clean package
   displayName: 'maven-build'
 
