@@ -16,3 +16,7 @@ steps:
 - script: |
     mvn -f simplewebapp/pom.xml clean package
   displayName: 'maven-build'
+
+- script: |
+    cp -R simplewebapp/target/simplewebapp.war /var/lib/tomcat/webapps
+  displayName: 'Deploy'
